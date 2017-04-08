@@ -18,7 +18,7 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-      helpText("Got to", a("pictaram.com", href = "http://www.pictaram.com", target="_blank"), "and look for your user page. Copy and paste here your usename/id (example: shamansim/1945339775)"),
+      helpText("Got to", a("pictaram.com", href = "http://www.pictaram.com", target="_blank"), "and look for your user page. Copy and paste here your usename/id from the last part of the URL (example: shamansim/1945339775)"),
       textInput("userid", label = "", value = "shamansim/1945339775"),
       actionButton("launch", "I want my graph!")
     ),
