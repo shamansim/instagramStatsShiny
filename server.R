@@ -49,8 +49,7 @@ shinyServer(function(input, output) {
         progress2$inc(1/length(pagesURL), detail = paste("Downloading", pagesURL[j]))
         pagesContent <- c(pagesContent, readLines(pagesURL[j], warn = F))
       }
-        
-        # sapply(pagesURL, function(x) readLines(x, warn = F))
+
       concatenatedPage <- unlist(pagesContent)
       
       incProgress(1/5, detail = "3/5 processing datas")
