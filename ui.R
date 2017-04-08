@@ -13,21 +13,19 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Instagram Statistics"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
+      helpText("Got to", a("pictaram.com", href = "http://www.pictaram.com", target="_blank"), "and look for your user page. Copy and paste here your usename/id (example: shamansim/1945339775)"),
+      textInput("userid", label = "", value = "shamansim/1945339775"),
+      actionButton("launch", "I want my graph!")
     ),
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlot")
+       plotOutput("progression")
     )
   )
 ))
